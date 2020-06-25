@@ -1,0 +1,64 @@
+
+.header {
+    @extend %flex-section;
+    justify-content: space-between;
+    padding: 0.5% 1% 0.5% 1%; 
+    height: 49px;
+
+    a:link, a:visited {
+        color: #252533; 
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1em;
+    
+        &:hover {
+            color: #919191;
+        }
+    }
+
+    .logoHeader {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 1% 0% 1% 0%;
+        width: 20%;
+        background-position: left;
+
+        a {
+            margin-left: 5%;
+        }
+
+        &::before {
+            content: $logoUrl;
+            min-width: 45px;
+            width: 13%
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        width: 60%;
+        padding: 0.5%;
+        
+        a {
+            margin-left: 5%;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 3%;
+            justify-content: space-between;
+
+            a {
+                margin-left: 2%;
+                font-size: small;
+            }
+        }
+    }
+}

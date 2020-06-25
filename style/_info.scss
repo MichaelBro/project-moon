@@ -1,0 +1,17 @@
+.sectionInfo {
+    @extend %flex-section;
+    flex-flow: row wrap;
+    padding: 4% 1% 2% 1%;
+    justify-content: space-around;
+    background: #f0f0f0;
+}
+
+.infoItem {
+    @extend %flex-element-column;
+    @extend %default-h2-and-text;
+    width: 500px;
+    margin: 1% 2% 3% 2%;
+    padding: 1.5% 1% 1% 1.5%;
+    background: white;
+    box-shadow:  15px 15px 20px #888, 
+}

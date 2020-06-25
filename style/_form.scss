@@ -1,0 +1,180 @@
+.sectionForm {
+    @extend %flex-section;
+    background-color: #f0f0f0;
+
+    &:before {
+        height: 50px;
+        width: 100%;
+        content: '';
+        position: absolute;
+        background-color: white;
+    }
+}
+
+.formBox {
+    @extend %default-h2-and-text;
+
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    width: 600px;
+    padding: 2% 4% 2% 4%;
+    margin: 4% 0 4% 0;
+
+    background: white;
+    box-shadow:  20px 20px 25px #888;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 8% 2% 8% 2%;
+        background-color: #f0f0f0;
+        box-shadow: none;
+    }
+}
+
+label, legend {
+    font-weight: 600;
+}
+
+
+.titleForm {
+    padding-bottom: 8%;
+}
+
+$formColor: #18D4AC;
+
+.fieldsetForm {
+    border-color: $formColor;
+    border-width: medium;
+    display: flex;
+    flex-flow: column wrap;
+    padding-bottom: 4%;
+    margin: 0% 0 4% 0; 
+
+    @media (max-width: 768px) {
+        padding-bottom: 10%;
+        margin: 0%;
+    }
+}
+
+
+.legendTitle {
+    color: $formColor;
+    font-size: x-large;
+    padding: 1%;
+    margin: 0 2% 0 2%;
+
+    @media (max-width: 768px) {
+        font-size: large;
+        text-align: center;
+    }
+}
+
+.formElement {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 0% 3% 0% 3%;
+
+    @media (max-width: 768px) {
+        padding: 0%;
+    }
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+
+.formElement > * {
+    display: flex;
+    width: 40%;
+    margin: 1.5% 0 1.5% 0;
+    padding: 0.5% 1.5% 0.5% 1.5%;
+
+    @media (max-width: 768px) {
+        padding: 0%;   
+        width: 45%;
+    }
+
+    @media (max-width: 450px) {
+        width: auto;
+    }
+}
+
+.borderFormInput {
+    border: solid 2px rgb(209, 209, 209);
+    border-radius: 12px;
+    background-color: white;
+    padding: 1.4%;
+    cursor: pointer;
+}
+
+.selectInput:hover {
+    border: solid 2px $formColor;    
+}
+
+.floorsForm {
+    border: none;
+}
+
+.radioHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.floorsFormLabel{
+    text-align: left;
+    justify-content: left;
+}
+
+.radioHolderInput {
+    display: none;
+}
+
+.radioHolderLabel {
+    cursor: pointer;
+    border: solid 2px rgb(209, 209, 209);
+    border-radius: 12px;
+    width: calc((90% / 3));
+    text-align: center;
+    background-color: white;
+
+    &:hover {
+        border-radius: 12px;
+        background-color: $formColor;    
+        border: solid 2px $formColor;
+        color: #252533;
+    }
+}
+
+input:checked + .radioHolderLabel {
+    background-color: $formColor;
+    border: solid 2px $formColor;
+
+    color: #252533;
+}
+
+.buttonSumbit {
+    border: solid 2px $formColor;
+    border-radius: 12px;
+    color: $formColor;
+    background: none;
+    font-weight: 600;
+    width: 25%;
+    padding: 1% 2% 1% 2%;
+
+    &:hover {
+        background-color: $formColor;
+        transition: 0.5s;
+        color: #252533;
+    }
+
+    @media (max-width: 768px) {
+        width: auto;
+        margin-top: 4%;
+        border-width: 3px;
+    }
+}

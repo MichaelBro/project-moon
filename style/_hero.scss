@@ -1,0 +1,74 @@
+.sectionHero {
+    @extend %flex-section;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heroItem {
+    @extend %flex-element-column;
+    justify-content: flex-end;
+    object-fit: cover;    
+    padding: 2.2% 0 2.2% 0;
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+
+    h1 {
+        margin-bottom: 1%;
+    }
+
+    p {
+        margin-top: 1%;
+    }
+
+    &::before {
+        content: $logoUrl;
+        height: 41%;
+        width: 32.5%;
+        align-self: center;
+
+        @media (max-width: 768px) {
+            height: 31.5%;
+            width: 29%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: x-large;
+        padding-bottom: 4%;
+    }
+    
+    @media (max-width: 450px) {
+        font-size: large;
+    }
+}
+
+.logoHero {
+    background-image: $logoUrl;
+    background-repeat: no-repeat;    
+    background-position: center;
+}
+
+.buttonHero {
+    align-self: center;
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: white;
+    width: 40%;
+    padding: 3%;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 70%;
+    text-decoration: none;
+    font-size: 1em;
+
+
+    &:hover {
+        background-color: white;
+        transition: 0.5s;
+        color: #252533;
+    }
+}

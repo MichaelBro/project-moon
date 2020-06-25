@@ -1,0 +1,75 @@
+.footer {
+    background-color: #303846;
+    @extend %flex-section;
+    justify-content: space-between;
+    padding: 4% 6% 3% 6%;
+    color: white;
+    flex-flow: wrap;
+
+    h3 {
+        font-size: x-large;
+        margin: 0;
+    }
+
+    a:link, a:visited {
+        color: white; 
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9em;
+        line-height: 190%;
+        
+        &:hover {
+        color: #919191;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 8% 0% 8% 0%;    
+        flex-direction: column; 
+        align-items: center;   
+    }
+}
+
+
+.copyright {
+    display: flex;
+    flex-flow: column wrap;
+
+    @media (max-width: 768px) {
+        order: 2;
+    }
+
+    .logoFooter {
+        font-size: large;
+        display: flex;
+        align-items: center;
+                
+        &::before {
+            content: $logoUrl;
+            padding: 10%;
+            min-width: 15px;
+            width: 25%;  
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        } 
+       
+    }
+}
+
+.document, .developer {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        order: 1;
+        flex-direction: column;
+        align-items: center;
+        margin: 3%;
+        
+        h3 {
+            text-align: center;
+        }
+    }
+}
